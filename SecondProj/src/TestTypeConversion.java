@@ -22,7 +22,7 @@ public class TestTypeConversion {
 	
 		double salary = Double.parseDouble(args[0]);
 		
-		String salaryStr = String.valueOf(salary);
+		String salaryStr = String.valueOf(salary); // value of object to string
 		System.out.println(salaryStr);
 
 		

@@ -1,9 +1,14 @@
 interface Modem {
  
-  public boolean open();                               
+  char[] modemVersion = null;
+public boolean open();                               
   public boolean close();
   public int read ();
   public int write();
+public static void getMyName() {
+	// TODO Auto-generated method stub
+	
+}
 
 }
 
@@ -99,14 +104,14 @@ public class ModemTesting {
 	huaweimodem.read();
 	huaweimodem.close();
 	
-	Modem [] modems = new MindStickModem[4];
+	Modem [] modems = new MindStickModem [4];
 	modems[0] = new MindStickModem();
 	modems[1] = new HuaweiModem();
 	modems[2] = new HuaweiModem();
 	modems[3] = new MindStickModem();
 	
 	for (Modem modem:modems) {
-		System.out.println(modem.modemVersion);
+		System.out.println(Modem.modemVersion);
 		Modem.getMyName();
 		modem.open();
 		modem.write();
